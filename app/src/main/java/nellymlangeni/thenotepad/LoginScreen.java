@@ -47,5 +47,16 @@ public class LoginScreen extends AppCompatActivity {
                 }
             }
         });
+
+        TextView lblSignUp = (TextView) findViewById((R.id.lblSignup));
+
+        lblSignUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(LoginScreen.this, RegisterActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
     }
 }

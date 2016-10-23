@@ -14,14 +14,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        android:id="@+id/linearMainContent">
 
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:text="Note Keeper"
-            android:id="@+id/textView4"
+            android:id="@+id/lblHeading"
             android:gravity="center"
             android:textSize="27dp"
             android:textStyle="bold" />
@@ -29,7 +30,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/imageView"
+            android:id="@+id/imgViewLogo"
             android:layout_weight="1.4"
             android:scaleType="fitCenter"
             android:src="@drawable/logo_128" />
@@ -67,7 +68,8 @@
                     android:id="@+id/txtLoginUsername"
                     android:hint="Username"
                     android:allowUndo="false"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"
+                    android:clickable="false" />
 
                 <EditText
                     android:layout_width="fill_parent"
@@ -84,28 +86,37 @@
                 android:layout_height="wrap_content"
                 android:text="Signin"
                 android:id="@+id/btnLogin"
-                android:layout_marginTop="25dp"
-                android:clickable="true" />
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                android:background="#FFAB40" />
 
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="No account yet? Signup here"
-                android:id="@+id/textView"
-                android:layout_marginTop="2dp"
-                android:gravity="center" />
+                android:id="@+id/lblSignup"
+                android:layout_marginTop="7dp"
+                android:gravity="center"
+                android:linksClickable="false"
+                android:layout_marginBottom="7dp" />
 
             <LinearLayout
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="fill_parent"
+                android:gravity="left|center">
 
                 <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/imageButton3" />
+                    android:layout_width="50dp"
+                    android:layout_height="fill_parent"
+                    android:id="@+id/imageButton3"
+                    android:src="@drawable/blog"
+                    android:scaleType="fitCenter"
+                    android:background="#00ffffff" />
+
             </LinearLayout>
 
         </LinearLayout>
     </LinearLayout>
+
 </RelativeLayout>
